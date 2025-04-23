@@ -1,12 +1,13 @@
 #include <stdio.h>
 
+//definição da movimentação da torre
 void moverTorre(int casas) {
     if (casas > 0) {
         printf("Torre para Direita\n");
         moverTorre(casas - 1);
     }
 }
-
+//definição da movimentação do bispo
 void moverBispo(int casas) {//precisa ser feito com loop aninhado
     if (casas > 0) {
         int var = casas % 2;
@@ -19,14 +20,14 @@ void moverBispo(int casas) {//precisa ser feito com loop aninhado
         moverBispo(casas - 1);
     }
 }
-
+//definição da movimentação da rainha
 void moverRainha(int casas) {
     if (casas > 0) {
         printf("Rainha para Esquerda\n");
         moverRainha(casas - 1);
     }
 }
-
+//def quantidade de casas movimento
 int main() {
     printf("=== Movimentação da Torre:\n");
     moverTorre(5);
